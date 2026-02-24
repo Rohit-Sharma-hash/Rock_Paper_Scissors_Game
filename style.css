@@ -8,21 +8,23 @@ h1{
     background-color: green;
     color: whitesmoke;
     text-align: center;
-    height: 5rem;
+    height: auto;
+    padding: 1rem;
     line-height: 5rem;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 4rem;
+    font-size: clamp(2rem, 5vw, 4rem);
     box-shadow: 10px 20px 30px rgb(68, 102, 17);
 }
 
 .choice{
-    height: 160px;
-    width: 160px;
-    border-radius: 100% ;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
     display:flex;
     justify-content: center;
     align-items: center;
     box-shadow: 20px 20px 30px rgb(99, 99, 96);
+    transition: all 0.4s ease-in-out;
     transition-property: all;
     transition-duration: 0.4s;
     transition-timing-function: ease-in-out;
@@ -34,9 +36,9 @@ h1{
     transform: scale(1.1);
 }
 
-img{
-    height: 150px;
-    width: 150px;
+ img{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -45,7 +47,8 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:3rem;
+    flex-wrap: wrap;
+    gap:2rem;
     margin-top: 3rem;
 }
 
@@ -53,9 +56,9 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
+    gap: 3rem;
     margin-top: 3rem;
-    font-size: 25px;
+    font-size: clamp(1rem, 3vw, 1.5rem);
 }
 body{
     background-color: rgb(28, 236, 108);
@@ -83,4 +86,20 @@ body{
     border-radius: 10px;
     border:2px solid rgb(33, 33, 85) ;
     box-shadow: 10px 10px 30px rgb(19, 3, 243);
+}
+@media (max-width: 600px) {
+    .choice {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 2.5rem;
+    }
+
+    #msg {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
 }

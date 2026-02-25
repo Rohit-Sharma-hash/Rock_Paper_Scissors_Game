@@ -50,4 +50,4 @@ Beginner Web Developer | Learning Full-Stack Development
 
 ⭐ If you like this project, don’t forget to star the repository!
 
-## 📂 Project Structure
+
